@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AutoWash - Car Wash Website Template</title>
+    <script src="https://sdk.twilio.com/js/client/v1.11/twilio.min.js"></script>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>Elite<span>Detailing</span></h1>
+                            <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>Opening Hour</h3>
+                                    <p>Mon - Sat, 8:00am - 6:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="fa fa-phone-alt"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>Call Us</h3>
+                                    <p>+1 314-535-9715</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>Email Us</h3>
+                                    <p>info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link ">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="price.html" class="nav-item nav-link">Price</a>
+
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="appointment.html" class="nav-item nav-link">Appointment</a>
+                    </div>
+                    <div class="ml-auto">
+                        <a class="btn btn-custom" href="#">Get Appointment</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Appointment</h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="location">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5">
+                    <div class="location-form">
+                        <h3>Request for a car wash</h3>
+                        <form id="appointmentForm">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                                <p>Date</p>
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                            <label for="service">Choose a service:</label>
+                            <select id="servicetype" name="servicetype" form="appointmentForm">
+                                <option value="Quickwash">Quick Wax</option>
+                                <option value="Handwax">Hand wash</option>
+                                <option value="ultimate wax">Ultimate Wax</option>
+                                <option value="Exterior service">Exterior Service</option>
+                                <option value="Interior Service">Interior Service</option>
+                                <option value="Full Detail">Full Detail</option>
+                                <option value="Engine Cleansing">Engine Cleansing</option>
+                                <option value="Headlight Restoration">Headlight Restoration</option>
+                            </select>
+                            </div>
+                            <div class="control-group">
+                            <label for="Time">Choose a Time Slot:</label>
+                            <select id="slot" name="slot" form="appointmentForm">
+                                <option value="8-10">8-10</option>
+                                <option value="10-12">10-12</option>
+                                <option value="12-2">12-2</option>
+                                <option value="2-4">2-4</option>
+                                <option value="4-6">4-6</option>
+                            </select>
+                            </div>
+                            <div class="control-group">
+                                <input type="submit" value="Book Appointment">
+                            </div>
+                        </form>
+                        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+                        <!-- <script src="app.js"></script> -->
+                        <!-- ... Your form fields ... -->
+
+                        <!-- Add the Axios library from a CDN (Content Delivery Network) -->
+                        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form data
+    const formData = new FormData(event.target);
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const date = formData.get('date');
+    const time = formData.get('slot');
+    const service = formData.get('servicetype');
+
+    // Create an object with the form data
+    const appointmentData = {
+      name: name,
+      phone: phone,
+      date: date,
+      time: time,
+      service: service
+    };
+
+    // Send the data to a serverless function that handles SMS sending
+    axios.post('https://brilliant-duckanoo-0de190.netlify.app/.netlify/functions/sendSMS', appointmentData)
+      .then(response => {
+        alert(response.data.message);
+        // Reset the form
+        event.target.reset();
+      })
+      .catch(error => console.error('Error:', error));
+  });
+</script> -->
+                        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+                        <script>
+                            document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+                                event.preventDefault();
+
+                                // Get form data
+                                const formData = new FormData(event.target);
+                                const name = formData.get('name');
+                                const email = formData.get('email');
+                                const phone = formData.get('phone');
+                                const date = formData.get('date');
+                                const time = formData.get('slot');
+                                const service = formData.get('servicetype');
+                                console.log(time);
+
+                                // Create the SMS message
+                                const message = `New Appointment:
+Name: ${name}
+Phone: ${phone} 
+email: ${email}    
+Date: ${date}
+Time: ${time}
+Service: ${service}`;
+
+                                // Customize this with your Twilio Account SID and Auth Token
+                                const accountSid = 'AC987cae968ea2804b23de7da6423c896c';
+                                const authToken = 'aee025ba20ec27a60dc9bd97677e134f';
+
+                                // Customize this with your Twilio phone number and recipient phone number
+                                const twilioPhone = '+14179293765';
+                                const recipientPhone = '+17869737979';
+
+                                // Send SMS using Twilio Programmable SMS API
+                                const params = new URLSearchParams();
+                                params.append('To', recipientPhone);
+                                params.append('From', twilioPhone);
+                                params.append('Body', message);
+
+                                // Send SMS using Twilio Programmable SMS API
+                                axios.post(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages`, params, {
+                                    auth: {
+                                        username: accountSid,
+                                        password: authToken
+                                    },
+                                    headers: {
+                                        'Content-Type': 'application/x-www-form-urlencoded'
+                                    }
+                                })
+                                    .then(response => {
+                                        alert('Appointment booked successfully! You will receive a confirmation SMS.');
+                                        // Reset the form
+                                        event.target.reset();
+                                    })
+                                    .catch(error => {
+                                        console.error('Failed to book the appointment:', error);
+                                        alert('Failed to book the appointment. Please try again later.');
+                                    });
+                            });
+                        </script>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Location End -->
+
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Get In Touch</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>4269 Laclede Ave, St. Louis, MO 63108, United States</p>
+                        <p><i class="fa fa-phone-alt"></i>+1 314-535-9715</p>
+                        <p><i class="fa fa-envelope"></i>info@example.com</p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Popular Links</h2>
+                        <a href="">About Us</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Our Service</a>
+
+                        <a href="">Pricing Plan</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
